@@ -13,7 +13,7 @@ function BlogPost({ data }) {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
-      <GatsbyImage image={image} />
+      <GatsbyImage image={image} alt='img' />
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </Layout>
   );
