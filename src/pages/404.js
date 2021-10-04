@@ -1,15 +1,11 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
+import { navigate } from '@gatsbyjs/reach-router';
 
 function NotFoundPage() {
-  return (
-    <main>
-      <title>Not found</title>
-      <h1>Page not found</h1>
-      <Link to='/'>Go home</Link>
-    </main>
-  );
+  navigate('/');
+
+  return null;
 }
 
 export default NotFoundPage;

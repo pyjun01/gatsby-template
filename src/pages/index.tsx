@@ -1,13 +1,9 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import BlogPage from './blog';
 
 function IndexPage() {
-  return (
-    <Layout pageTitle='homepage'>
-      <p>Hello, World!</p>
-    </Layout>
-  );
+  return <BlogPage />;
 }
 
 export default IndexPage;

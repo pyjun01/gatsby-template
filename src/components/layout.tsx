@@ -1,33 +1,23 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 
+import GlobalStyle from '../GlobalStyle';
+import Inner from './Inner';
+
 const Container = styled.div`
-  margin: auto;
-  max-width: 500px;
   font-family: sans-serif;
 
   header {
-    font-size: 3rem;
+    padding: 1rem 0 1.5rem;
     color: gray;
     font-weight: 700;
-    margin: 3rem 0;
-  }
 
-  nav {
-    ul {
-      display: flex;
-      padding-left: 0;
-      list-style: none;
-
-      li {
-        padding-right: 2rem;
-
-        a {
-          color: black;
-        }
-      }
+    a {
+      font-size: 2.75rem;
+      color: #333333;
+      text-decoration: none;
     }
   }
 
@@ -36,7 +26,7 @@ const Container = styled.div`
   }
 `;
 
-function Layout({ pageTitle, children }) {
+function Layout({ pageTitle, children }: { pageTitle?: string; children: ReactNode }) {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -49,23 +39,20 @@ function Layout({ pageTitle, children }) {
 
   return (
     <Container>
+      <GlobalStyle />
       <title>
-        {pageTitle} | {data.site.siteMetadata.title}
+        {data.site.siteMetadata.title}
+        {pageTitle ? ` | ${pageTitle}` : ''}
       </title>
-      <header>{data.site.siteMetadata.title}</header>
-      <nav>
-        <ul>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/blog'>Blog</Link>
-          </li>
-        </ul>
-      </nav>
+      <header>
+        <Inner>
+          <h1>
+            <Link to='/'>Justin</Link>
+          </h1>
+        </Inner>
+      </header>
       <main>
-        <h1>{pageTitle}</h1>
-        {children}
+        <Inner>{children}</Inner>
       </main>
     </Container>
   );
