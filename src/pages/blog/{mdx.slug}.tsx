@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';

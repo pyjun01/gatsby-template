@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { usePostList } from '../../hooks/post';
 import Layout from '../../components/layout';
 import List from '../../components/List';

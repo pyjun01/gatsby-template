@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';

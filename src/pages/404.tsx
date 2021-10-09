@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { navigate } from '@gatsbyjs/reach-router';
 
 function NotFoundPage() {
