@@ -9,6 +9,7 @@ export const usePostList = () => {
             title
             date(formatString: "LL")
             preview
+            tag
           }
           id
           slug

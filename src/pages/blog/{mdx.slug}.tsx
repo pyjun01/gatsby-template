@@ -47,6 +47,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM D, YYYY")
         preview
+        tag
       }
       body
     }
