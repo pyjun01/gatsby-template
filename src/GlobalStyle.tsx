@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
   ul, ol, li {
     list-style: none;
   }
+
+  a {
+    color: #1a5b89;
+  }
 `;
 
 export default GlobalStyle;
